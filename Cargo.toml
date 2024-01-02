@@ -1,0 +1,11 @@
+[package]
+name = "serial_usb"
+version = "0.1.0"
+edition = "2021"
+author = OverSauce
+
+[dependencies]
+winapi = "0.3.9"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["fileapi", "winbase", "handleapi", "commapi"] }
